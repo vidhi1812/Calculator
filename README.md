@@ -1,3 +1,3 @@
 # Calculator
 
-<img src="https://miro.medium.com/max/875/1*7bnLKsChXq94QjtAiRn40w.png">
+<img src="https://vidhi1812.github.io/Calculator/">
