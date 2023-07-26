@@ -1,0 +1,66 @@
+body{
+
+    padding:0;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 120vh;
+    background:gainsboro;
+}
+.cont{
+    width:35%;
+    height:67vh;
+    padding:12px;
+    
+    border-radius:8px;
+    box-shadow: 12px 12px 20px rgb(157, 24, 24),
+     -12px -12px 20px rgb(39, 105, 39);
+}
+.main #screen{
+    width:97%;
+    height: 72px;
+    font-size:37px;
+    font-weight: bolder;
+    border:none;
+    outline:none;
+    text-align:right;
+    padding-right:.5em;
+    background:whitesmoke;
+    border-radius:6px;
+    box-shadow:inset 8px 8px 8px  rgb(151, 76, 76),
+               inset -8px -8px 8px rgb(103, 70, 27);
+}
+
+.btns {
+width:100%;
+margin-top:2em;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+margin-left:2px;
+margin-top:68px;
+
+}
+
+.btns .rowbtns button{
+    width:80px;
+    height:33px;
+    font-size:20px;
+    font-weight: bolder;
+    border:none;
+    outline:none;
+    margin:5px;
+    border-radius:4px;
+    box-shadow:6px 6px 9px rgb(57, 57, 94),
+               -6px -6px 9px rgb(121, 98, 57);
+
+
+
+}
+
+.btn:hover{
+    color: red;
+    background-color:rgb(30, 224, 160);
+}

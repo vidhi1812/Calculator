@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="cont">
+
+   <div class="main">
+    <input id="screen" type="text" placeholder="0">
+   </div>
+
+<div class="btns">
+    <div class="rowbtns">
+       
+        <button onclick="screen.value=''">Ac</button>
+        <button onclick="backspc()">Del</button>
+        <button class="btn">.</button>
+        <button  onclick="log()">log</button>
+        <button onclick="pi()">pi</button>
+
+    </div>
+    <div class="rowbtns">
+        <button onclick="sin()">sin</button>
+        <button class="btn">cos</button>      
+        <button class="btn">tan</button>
+        <button class="btn">%</button>
+        <button class="btn">*</button>
+    </div>
+    <div class="rowbtns">
+        <button onclick="sqrt()">root</button>
+        <button onclick="e()">e</button>
+
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+
+    </div>
+    <div class="rowbtns">
+        <button class="btn">/</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>      
+        <button class="btn">6</button>
+       
+        <button class="btn">7</button>
+
+    </div>
+    <div class="rowbtns">
+        <button class="btn">8</button>      
+        <button class="btn">9</button>
+        <button class="btn">0</button>
+        <button onclick="pow()">x^y</button>
+        <button  onclick="screen.value=eval(screen.value)">=</button>
+
+    </div>
+
+ 
+    <div class="rowbtns">
+        <button class="btn">+</button>
+        <button class="btn">-</button>
+        
+        <button onclick="fact()">x!</button>      
+        <button class="btn">(</button>
+        <button class="btn">)</button>
+    </div>
+   
+
+</div>
+   </div> 
+</body>
+<script>
+
+   var screen=document.querySelector('#screen');
+   var btn=document.querySelectorAll('.btn');
+
+   for(item of btn){
+    item.addEventListener('click',(e)=>{
+        btntext=e.target.innerText;
+
+        if(btntext == '*'){
+            btntext='*';
+        }
+
+        if(btntext == '/'){
+            btntext='/';
+        }
+        screen.value+=btntext;
+    });
+   }
+
+
+   function sin()
+   {
+    screen.value=Math.sin(screen.value);
+   }
+
+   function cos()
+   {
+    screen.value=Math.cos(screen.value);
+   }
+   function tan()
+   {
+    screen.value=Math.tan(screen.value);
+   }
+   function pow()
+   {
+    screen.value=Math.pow(screen.value,2);
+   }
+   function sqrt()
+   {
+    screen.value=Math.sqrt(screen.value);
+   }
+   function log()
+   {
+    screen.value=Math.log(screen.value);
+   }
+   function pi()
+   {
+    screen.value=3.14159265359;
+   }
+   function e()
+   {
+    screen.value=2.718281828459045;
+   }
+
+
+   function fact(){
+    var i,num,f;
+    f=1;
+    num=screen.value;
+    for(i=1;i<=num;i++){
+        f=f*i;
+    }
+    i=i-1;
+    screen.value=f;
+   }
+
+
+   function backspc(){
+    screen.value=screen.value.substr(0,screen.value.length-1);
+   }
+
+</script>
+</html>
